@@ -29,7 +29,7 @@ class Square implements Resizeable
     public function getArea(){
 
 
-        $this->width*=$this->width*rand(1,100);
+        $this->width+=$this->width*rand(1,100);
 
         return pow($this->width,2);
     }
