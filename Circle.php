@@ -11,14 +11,13 @@ class Circle implements Resizeable
     }
 
     public function getArea(){
-        $this->radius+=$this->radius*rand(1,100);
 
         return pi() * pow($this->radius, 2);
     }
 
-    public function resize()
+    public function resize($percent)
     {
-        return $this->getArea();
+        return $this->getArea()+($this->getArea()*$percent)/100;
     }
 
 }

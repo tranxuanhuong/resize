@@ -45,14 +45,13 @@ class Rectangle implements Resizeable
     }
     public function getArea(){
 
-        $this->width+=$this->width*rand(1,100);
-        $this->height+=$this->height*rand(1,100);
+
         return $this->width*$this->height;
     }
 
-    public function resize()
+    public function resize($percent)
     {
-        return $this->getArea();
+        return $this->getArea()+($this->getArea()*$percent)/100;
 
     }
 
